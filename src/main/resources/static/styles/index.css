@@ -56,3 +56,42 @@ form {
     background-color: #0bd038;
     border: none;
 }
+
+.reset-button{
+    display: block;
+    height: 37px;
+    width: auto;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid #c0c0c0;
+    color: #000000;
+    background-color: transparent;
+    margin-right: 20px;
+}
+
+.reset-button:hover {
+    cursor: pointer;
+    color: white;
+    background-color: #e50116;
+    border: none;
+}
+
+#file {
+    display: none;
+}
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.file-count {
+    margin-top: 5px;
+    color: #333;
+}

@@ -5,15 +5,19 @@
     <title>Files Renamer</title>
 
 </head>
-<form th:action="@{/}" method="POST">
+<form th:action="@{/}" method="POST" enctype="multipart/form-data" id="renameForm" onsubmit="clearFormFields()">
     <div class="data-div">
-        <label for="path">Folder path:</label>
-        <input id="path" type="text" name="filesPath" placeholder="Example: D:\renameTest"/>
+        <label for="file">Choose files:</label>
+        <label class="custom-file-upload">
+            <input type="file" id="file" name="files" multiple>
+            Select files
+        </label>
     </div>
     <div class="data-div">
         <label for="pattern">File name pattern:</label>
         <input id="pattern" type="text" name="pattern" placeholder="Example: Lisbon_Area_"/>
     </div>
+
     <div class="data-div">
         <label for="endings">File name endings:</label>
         <textarea id="endings"
@@ -26,9 +30,9 @@ Note: the number of endings must match the number of files in the selected direc
         ></textarea>
     </div>
     <div class="submit-div">
-        <input class="submit-input" type="submit" value="Rename"/>
+        <button class="reset-button" type="reset">Reset</button>
+        <input class="submit-input" type="submit" value="Rename" />
     </div>
 </form>
-
 
 </html>
