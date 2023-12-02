@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" th:href="@{/styles/index.css}">
+    <title>Files Renamer</title>
+
+</head>
+<form th:action="@{/}" method="POST">
+    <div class="data-div">
+        <label for="path">Folder path:</label>
+        <input id="path" type="text" name="filesPath" placeholder="Example: D:\renameTest"/>
+    </div>
+    <div class="data-div">
+        <label for="pattern">File name pattern:</label>
+        <input id="pattern" type="text" name="pattern" placeholder="Example: Lisbon_Area_"/>
+    </div>
+    <div class="data-div">
+        <label for="endings">File name endings:</label>
+        <textarea id="endings"
+                  name="lineEnds"
+                  rows="7"
+                  cols="44"
+                  required
+                  placeholder="Example: 01A, 02A, 03A, 01B, 02B, 01C
+Note: the number of endings must match the number of files in the selected directory."
+        ></textarea>
+    </div>
+    <div class="submit-div">
+        <input class="submit-input" type="submit" value="Rename"/>
+    </div>
+</form>
+
+
+</html>
